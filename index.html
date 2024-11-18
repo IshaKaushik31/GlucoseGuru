@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glucose Guru</title>
+</head>
+<body>
+    <h1>Welcome to Glucose Guru</h1>
+    <form action="/predict" method="post">
+        <label for="pregnancies">No. of Pregnancies:</label>
+        <input type="text" name="pregnancies" required>
+
+        <label for="bmi">BMI:</label>
+        <input type="text" name="bmi" required>
+
+        <label for="skin_thickness">Skin Thickness:</label>
+        <input type="text" name="skin_thickness" required>
+
+        <label for="insulin">Insulin:</label>
+        <input type="text" name="insulin" required>
+
+        <label for="glucose">Glucose:</label>
+        <input type="text" name="glucose" required>
+
+        <label for="blood_pressure">Blood Pressure:</label>
+        <input type="text" name="blood_pressure" required>
+
+        <label for="age">Age:</label>
+        <input type="text" name="age" required>
+
+        <label for="diabetes_pedigree">Diabetes Pedigree Function:</label>
+        <input type="text" name="diabetes_pedigree" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
